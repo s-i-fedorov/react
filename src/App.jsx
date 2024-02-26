@@ -7,8 +7,11 @@ function App() {
          <h1>My first react app</h1>
       </header>
         <main className="container">
-            <Card />
-            <Card />
+            <Card  title={'dear friend!'}/>
+            <Card text={'how is your health?'}/>
+            <Card
+                title={'dear friend!'}
+                text={'how is your health?'}/>
         </main>
 
     </>
