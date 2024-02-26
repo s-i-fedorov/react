@@ -1,11 +1,14 @@
 import React from "react";
 
 class Card extends React.Component{
+    title = this.props.title;
+    text = this.props.text;
+
     render(){
         return <div className="card">
             <div className="card-body">
-                <h4 className="card-title">hi {this.props.title}</h4>
-                <p className="card-text">how are you? {this.props.text}</p>
+                {this.title ? <h4 className="card-title">{this.title}</h4> : null}
+                {this.text ? <p className="card-text">{this.text}</p> : null}
             </div>
         </div>
     }
