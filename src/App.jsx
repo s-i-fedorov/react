@@ -8,7 +8,7 @@ function App() {
         <header>
           <h1>My first react app</h1>
         </header>
-      < Progress />
+          <Progress percentage={40} />;
 </>
   )
 }
