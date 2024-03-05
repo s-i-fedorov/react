@@ -8,9 +8,13 @@ function App() {
         <header>
           <h1>My first react app</h1>
         </header>
-          <Progress percentage={40} />;
+          <Progress  className='progress-bar'
+                     role='progressbar' aria-valuenow='40' aria-valuemin='0'
+                     aria-valuemax='100' aria-label='progressbar' style={width} />;
 </>
   )
 }
 
 export default App
+//
+//
