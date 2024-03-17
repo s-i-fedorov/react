@@ -1,5 +1,5 @@
 import './App.css'
-import ListGroup from "./components/ListGroup.jsx";
+import BtnGroup from "./components/BtnGroup.jsx";
 
 function App() {
 
@@ -8,10 +8,7 @@ function App() {
         <header>
           <h1>My first react app</h1>
         </header>
-        <ListGroup >
-          <p>one</p>
-          <p>two</p>
-        </ListGroup>
+        <BtnGroup />
       </>
 
   )
