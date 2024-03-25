@@ -1,14 +1,13 @@
 import React from "react";
 
 class Progress extends React.Component{
-    percentage = this.props.percentage;
 
     render(){
-        console.log(this.props)
+        const {percentage} = this.props
         return      (<div className="progress">
                         <div className='progress-bar'
-                             role='progressbar' aria-valuenow='40' aria-valuemin='0'
-                             aria-valuemax='100' aria-label='progressbar' style={width: this.percentage+`%`}>
+                             role='progressbar' aria-valuenow={percentage} aria-valuemin='0'
+                             aria-valuemax='100' aria-label='progressbar' style={{width: percentage + '%'}}>
                         </div>
                     </div>)
     }
