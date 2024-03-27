@@ -1,40 +1,31 @@
 import React from "react";
-import cn from 'classnames';
 
 class BtnGroup extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            // isPressed: false,
-            btnClasses: 'btn btn-secondary'
+            isPressed: null
         }
     }
 
-    handleClick = () => {
-        this.setState({ bntClasses: 'btn btn-primary' })
-        console.log(this.state)
-}
+    handleClick = (btn) => {
+        this.setState({ isPressed: btn })
+    }
 
     render(){
-        // let isPressed = false;
 
-        // const btnClasses = cn('btn', {
-        //     'btn-secondary': !this.state.isPressed,
-        //     'btn-primary': this.state.isPressed
-        // })
-
-        // let btnClasses2 = 'btn btn-secondary'
-        // const pressHandl = function (){
-        //     btnClasses2 = 'btn btn-primary'
-        //     console.log('hello');
-        //     return btnClasses2
-        // }
+        let isClicked = 'btn btn-primary';
+        let notClicked = 'btn btn-secondary';
 
         return (
 
             <div className="btn-group" role="group">
-                <button type="button" className={this.state.btnClasses + ' left'} onClick={this.handleClick}>Left</button>
-                <button type="button" className={this.state.btnClasses + ' right'} >Right</button>
+                <button type="button" className={
+                    this.state.isPressed === 'left' ? isClicked : notClicked + ' left'}
+                        onClick={()=>this.handleClick( 'left')}>Left</button>
+                <button type="button" className={
+                    this.state.isPressed === 'right' ? isClicked : notClicked + ' left'}
+                        onClick={()=>this.handleClick('right')}>Right</button>
             </div>
 
         )
